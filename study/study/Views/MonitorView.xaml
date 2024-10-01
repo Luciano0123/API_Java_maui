@@ -1,0 +1,37 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="study.Views.MonitorView"
+             Title="MonitorView">
+    <VerticalStackLayout>
+        
+        <CollectionView ItemsSource="{Binding Monitor}">
+            <CollectionView.ItemTemplate Command="{Binding getPostsCommand}">
+                <DataTemplate>
+                    <VerticalStackLayout>
+                        <ScrollView>
+                            
+                            <Label
+                                Text="{Binding Foto}"
+                                FontSize="25"
+                                HorizontalTextAlignment="Center"
+                                TextColor="#025" 
+                            />
+                            <Label
+                                Text="{Binding Name}"
+                                FontSize="25"
+                                HorizontalTextAlignment="Center"
+                                TextColor="#025"
+                            />
+                            <Label
+                                Text="{Binding Disponibilidades}"
+                                Margin="15"
+                                TextColor="#12f"
+                            />
+
+                        </ScrollView>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
