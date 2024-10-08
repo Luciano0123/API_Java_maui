@@ -15,7 +15,7 @@ namespace study.Service
     {
         private HttpClient client;
         private Models.Monitor monitor;
-        private List<Models.Monitor> monitores;
+        private ObservableCollection<Models.Monitor> monitores;
         private JsonSerializerOptions serializerOptions;
 
         public MonitorService()
@@ -28,7 +28,7 @@ namespace study.Service
             };
 
         }
-        public async Task<List<Models.Monitor>> getAllMonitorsAsync()
+        public async Task<ObservableCollection<Models.Monitor>> getAllMonitorsAsync()
         {
             Uri uri = new Uri("https://localhost/8080/monitores");
             try
@@ -37,7 +37,7 @@ namespace study.Service
                 if (response.IsSuccessStatusCode)
                 {
                     string content = await response.Content.ReadAsStringAsync();
-                    monitores = JsonSerializer.Deserialize<List<Models.Monitor>>(content, serializerOptions);
+                    monitores = JsonSerializer.Deserialize<ObservableCollection<Models.Monitor>>(content, serializerOptions);
                 }
             }
             catch (Exception ex)
