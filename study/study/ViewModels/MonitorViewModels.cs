@@ -17,11 +17,11 @@ namespace study.ViewModels
         
         }
 
-        private ICommand getMonitoresCommand { get; }
+        public ICommand getMonitoresCommand { get; }
 
         public async void getMonitores()
         {
-            monitores = await new Service.MonitorService().getAllMonitorsAsync();
+            Monitores = await new Service.MonitorService().getAllMonitorsAsync();
         }
     }
 }

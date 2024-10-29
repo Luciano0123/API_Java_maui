@@ -30,7 +30,7 @@ namespace study.Service
         }
         public async Task<ObservableCollection<Models.Monitor>> getAllMonitorsAsync()
         {
-            Uri uri = new Uri("https://localhost/8080/monitores");
+            Uri uri = new Uri("http://localhost:8080/monitores");
             try
             {
                 HttpResponseMessage response = await client.GetAsync(uri);

@@ -13,8 +13,8 @@ namespace study.Models
         public string Foto { get; set; }
         public string Whatsapp { get; set; }
         public string Email { get; set; }
-        public string Conteudo { get; set; }
-        public Disciplina IdDisciplina { get; set; }
+        public string Conteudo { get; set; } 
+        public int IdDisciplina { get; set; }
         public List<Disponibilidade> Disponibilidades { get; set; }
     }
 }
