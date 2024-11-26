@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Monitor"
-        ContentTemplate="{DataTemplate local:MonitorView}"
+        ContentTemplate="{DataTemplate local:LoginView}"
         Route="MainPage" />
 
 </Shell>

@@ -7,11 +7,10 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <VerticalStackLayout>
-                        
+
                         <Label Text="{Binding Conteudo}"/>
-                        <Label Text="{Binding Name}/>
+                        <Label Text="{Binding Name}"/>
                         <Label Text="{Binding IdDisciplina }"/>
-                        <Image Source="{Binding Foto}" HeightRequest="180"/>
                     </VerticalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
